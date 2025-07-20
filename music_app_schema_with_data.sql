@@ -17,13 +17,13 @@ CREATE TABLE IF NOT EXISTS Lessons (
     title TEXT NOT NULL,
     description TEXT,
     level TEXT,
-    media_url TEXT,
+    media_id TEXT, -- YouTube video ID only
     type TEXT
 );
 
-INSERT OR IGNORE INTO Lessons (title, description, level, media_url, type) VALUES
-('Basic Notes', 'Learn the basic musical notes', 'basic', 'https://example.com/note1.mp4', 'note'),
-('Chord Theory', 'Introduction to chord structures', 'intermediate', 'https://example.com/chord.mp4', 'chord');
+INSERT OR IGNORE INTO Lessons (title, description, level, media_id, type) VALUES
+('Basic Notes', 'Learn the basic musical notes', 'basic', 'PyOKefHURsg', 'note'),
+('Chord Theory', 'Short Piano Tutorial', 'intermediate', 'dJBq89uZYmI', 'chord');
 
 CREATE TABLE IF NOT EXISTS Exercises (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -44,12 +44,12 @@ CREATE TABLE IF NOT EXISTS Songs (
     artist TEXT,
     level TEXT,
     sheet_url TEXT,
-    video_url TEXT
+    video_id TEXT -- YouTube video ID only
 );
 
-INSERT OR IGNORE INTO Songs (title, artist, level, sheet_url, video_url) VALUES
-('Let It Be', 'The Beatles', 'basic', 'https://example.com/letitbe.pdf', 'https://example.com/letitbe.mp4'),
-('River Flows in You', 'Yiruma', 'intermediate', 'https://example.com/riverflows.pdf', 'https://example.com/riverflows.mp4');
+INSERT OR IGNORE INTO Songs (title, artist, level, sheet_url, video_id) VALUES
+('Let It Be', 'The Beatles', 'basic', 'https://example.com/letitbe.pdf', 'CGj85pVzRJs'),
+('River Flows in You', 'Yiruma', 'intermediate', 'https://example.com/riverflows.pdf', '7maJOI3QMu0');
 
 CREATE TABLE IF NOT EXISTS Instruments (
     id INTEGER PRIMARY KEY AUTOINCREMENT,

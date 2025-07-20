@@ -1,0 +1,67 @@
+Project MinhQuan_Music4You {
+  database_type: "SQLite"
+}
+
+Table Users {
+  id integer [pk, increment]
+  username text [unique, not null]
+  email text [unique]
+  avatar_url text
+  created_at datetime [default: `CURRENT_TIMESTAMP`]
+}
+
+Table Lessons {
+  id integer [pk, increment]
+  title text [not null]
+  description text
+  level text
+  media_url text
+  type text
+}
+
+Table Exercises {
+  id integer [pk, increment]
+  lesson_id integer [ref: > Lessons.id]
+  title text [not null]
+  type text
+  content text
+}
+
+Table Songs {
+  id integer [pk, increment]
+  title text [not null]
+  artist text
+  level text
+  sheet_url text
+  video_url text
+}
+
+Table Instruments {
+  id integer [pk, increment]
+  name text [not null]
+  type text
+}
+
+Table PracticeRooms {
+  id integer [pk, increment]
+  room_name text [not null]
+  host_user_id integer
+  instrument text
+  created_at datetime [default: `CURRENT_TIMESTAMP`]
+}
+
+Table Achievements {
+  id integer [pk, increment]
+  user_id integer [ref: > Users.id]
+  title text [not null]
+  description text
+  earned_at datetime [default: `CURRENT_TIMESTAMP`]
+}
+
+Table UserProgress {
+  id integer [pk, increment]
+  user_id integer [ref: > Users.id]
+  lesson_id integer [ref: > Lessons.id]
+  completed boolean [default: 0]
+  completed_at datetime
+}

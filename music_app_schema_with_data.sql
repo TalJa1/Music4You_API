@@ -1,4 +1,15 @@
+
 PRAGMA foreign_keys = ON;
+
+-- Drop all existing tables to avoid conflicts (drop child tables first)
+DROP TABLE IF EXISTS UserProgress;
+DROP TABLE IF EXISTS Achievements;
+DROP TABLE IF EXISTS PracticeRooms;
+DROP TABLE IF EXISTS Exercises;
+DROP TABLE IF EXISTS Songs;
+DROP TABLE IF EXISTS Instruments;
+DROP TABLE IF EXISTS Lessons;
+DROP TABLE IF EXISTS Users;
 
 CREATE TABLE IF NOT EXISTS Users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -49,7 +60,8 @@ CREATE TABLE IF NOT EXISTS Songs (
 
 INSERT OR IGNORE INTO Songs (title, artist, level, sheet_url, video_id) VALUES
 ('Let It Be', 'The Beatles', 'basic', 'https://example.com/letitbe.pdf', 'CGj85pVzRJs'),
-('River Flows in You', 'Yiruma', 'intermediate', 'https://example.com/riverflows.pdf', '7maJOI3QMu0');
+('River Flows in You', 'Yiruma', 'intermediate', 'https://example.com/riverflows.pdf', '7maJOI3QMu0'),
+('Nocturne in E Flat Major (Op. 9 No. 2)', 'Chopin', 'intermediate', 'https://example.com/nocturne.pdf', 'p29JUpsOSTE');
 
 CREATE TABLE IF NOT EXISTS Instruments (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -67,6 +79,7 @@ CREATE TABLE IF NOT EXISTS PracticeRooms (
     host_user_id INTEGER,
     instrument TEXT,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    ,FOREIGN KEY (host_user_id) REFERENCES Users(id)
 );
 
 INSERT OR IGNORE INTO PracticeRooms (room_name, host_user_id, instrument) VALUES

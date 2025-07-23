@@ -6,7 +6,7 @@ from pydantic import BaseModel, Field
 from database import Base, engine
 
 # from routes import CategoryRoute, CustomerRoute, EmployeeRoute
-from Routes import SongRoute
+from Routes import SongRoute, UserRoute
 import logging
 from contextlib import asynccontextmanager
 
@@ -55,3 +55,4 @@ class FilterParams(BaseModel):
 
 
 app.include_router(SongRoute.router, prefix="/api/v1", tags=["songs"])
+app.include_router(UserRoute.router, prefix="/api/v1", tags=["users"])

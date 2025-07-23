@@ -66,14 +66,6 @@ VALUES (
         'note'
     ),
     (
-        'Chord Theory',
-        'This lesson provides a comprehensive introduction to chord structures, including major, minor, diminished, and augmented chords. You will learn how chords are constructed from intervals, how to identify them by ear, and how to play them on your instrument. The lesson also explores chord progressions, voice leading, and practical applications in popular music, with plenty of examples and exercises to reinforce your understanding.',
-        'intermediate',
-        'VNhyD4O4HWg',
-        'https://en.wikipedia.org/wiki/Chord_(music)',
-        'chord'
-    ),
-    (
         'Understanding Rhythm',
         'Explore the fundamental concepts of rhythm in music, including beat, tempo, meter, and syncopation. This lesson will help you understand how different note durations and rests create rhythmic patterns and how to feel and internalize a steady pulse. Practical exercises will focus on clapping rhythms, playing with a metronome, and recognizing various rhythmic figures in popular songs.',
         'basic',
@@ -117,9 +109,17 @@ VALUES (
         'Music Form and Analysis',
         'Understand the structural elements that define musical compositions. This lesson introduces common musical forms such as binary, ternary, sonata form, and rondo. You will learn to identify these forms in various pieces of music and analyze how different sections contribute to the overall structure and narrative of a work.',
         'advanced',
-        'Y_5K8f5CZpg', 
+        'Y_5K8f5CZpg',
         'https://en.wikipedia.org/wiki/Musical_form',
         'analysis'
+    ),
+    (
+        'Chord Theory',
+        'This lesson provides a comprehensive introduction to chord structures, including major, minor, diminished, and augmented chords. You will learn how chords are constructed from intervals, how to identify them by ear, and how to play them on your instrument. The lesson also explores chord progressions, voice leading, and practical applications in popular music, with plenty of examples and exercises to reinforce your understanding.',
+        'intermediate',
+        'VNhyD4O4HWg',
+        'https://en.wikipedia.org/wiki/Chord_(music)',
+        'chord'
     ),
     (
         'Orchestration Basics',

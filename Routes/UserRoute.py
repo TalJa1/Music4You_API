@@ -46,9 +46,28 @@ async def get_users(db: AsyncSession = Depends(get_db)):
     return users
 
 
+@router.get("/users/by-email/{email}", response_model=User)
+async def get_user_by_email(email: str, db: AsyncSession = Depends(get_db)):
+    result = await db.execute(select(UserModel).where(UserModel.email == email))
+    user = result.scalar_one_or_none()
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    return user
+
+
 @router.get("/users/{user_id}", response_model=User)
 async def get_user(user_id: int, db: AsyncSession = Depends(get_db)):
     result = await db.execute(select(UserModel).where(UserModel.id == user_id))
+    user = result.scalar_one_or_none()
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    return user
+
+
+# Find user by email
+@router.get("/users/by-email/{email}", response_model=User)
+async def get_user_by_email(email: str, db: AsyncSession = Depends(get_db)):
+    result = await db.execute(select(UserModel).where(UserModel.email == email))
     user = result.scalar_one_or_none()
     if user is None:
         raise HTTPException(status_code=404, detail="User not found")

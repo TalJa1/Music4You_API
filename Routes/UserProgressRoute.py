@@ -46,6 +46,25 @@ async def get_user_progresses(db: AsyncSession = Depends(get_db)):
     return progresses
 
 
+# Get progress by user_id and lesson_id
+@router.get(
+    "/user-progress/by-user-lesson/{user_id}/{lesson_id}", response_model=UserProgress
+)
+async def get_progress_by_user_and_lesson(
+    user_id: int, lesson_id: int, db: AsyncSession = Depends(get_db)
+):
+    result = await db.execute(
+        select(UserProgressModel).where(
+            (UserProgressModel.user_id == user_id)
+            & (UserProgressModel.lesson_id == lesson_id)
+        )
+    )
+    progress = result.scalar_one_or_none()
+    if progress is None:
+        raise HTTPException(status_code=404, detail="User progress not found")
+    return progress
+
+
 # Get all progress records by user_id
 @router.get("/user-progress/by-user/{user_id}", response_model=List[UserProgress])
 async def get_progress_by_user(user_id: int, db: AsyncSession = Depends(get_db)):
@@ -54,6 +73,25 @@ async def get_progress_by_user(user_id: int, db: AsyncSession = Depends(get_db))
     )
     progresses = result.scalars().all()
     return progresses
+
+
+# Get progress by user_id and lesson_id
+@router.get(
+    "/user-progress/by-user-lesson/{user_id}/{lesson_id}", response_model=UserProgress
+)
+async def get_progress_by_user_and_lesson(
+    user_id: int, lesson_id: int, db: AsyncSession = Depends(get_db)
+):
+    result = await db.execute(
+        select(UserProgressModel).where(
+            (UserProgressModel.user_id == user_id)
+            & (UserProgressModel.lesson_id == lesson_id)
+        )
+    )
+    progress = result.scalar_one_or_none()
+    if progress is None:
+        raise HTTPException(status_code=404, detail="User progress not found")
+    return progress
 
 
 @router.get("/user-progress/{progress_id}", response_model=UserProgress)

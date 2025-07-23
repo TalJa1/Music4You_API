@@ -6,7 +6,7 @@ from pydantic import BaseModel, Field
 from database import Base, engine
 
 # from routes import CategoryRoute, CustomerRoute, EmployeeRoute
-from Routes import LessonRoute, SongRoute, UserRoute, UserProgressRoute
+from Routes import LessonRoute, ResetDBRoute, SongRoute, UserRoute, UserProgressRoute
 import logging
 from contextlib import asynccontextmanager
 
@@ -58,3 +58,4 @@ app.include_router(SongRoute.router, prefix="/api/v1", tags=["songs"])
 app.include_router(UserRoute.router, prefix="/api/v1", tags=["users"])
 app.include_router(UserProgressRoute.router, prefix="/api/v1", tags=["user-progress"])
 app.include_router(LessonRoute.router, prefix="/api/v1", tags=["lessons"])
+app.include_router(ResetDBRoute.router, prefix="/api/v1", tags=["reset-db"])

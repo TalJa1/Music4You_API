@@ -44,6 +44,7 @@ CREATE TABLE IF NOT EXISTS Lessons (
     description TEXT,
     level TEXT,
     media_id TEXT, -- YouTube video ID only
+    lesson_link TEXT, -- Link to the lesson from web
     type TEXT
 );
 
@@ -53,20 +54,23 @@ INSERT
         description,
         level,
         media_id,
+        lesson_link,
         type
     )
 VALUES (
         'Basic Notes',
-        'Learn the basic musical notes',
+        'Learn the basic musical notes, including their names, positions on the staff, and how they relate to the keys on a piano. This lesson covers the fundamentals of reading sheet music, recognizing note values, and understanding the musical alphabet. You will also practice identifying notes by ear and through interactive exercises, building a strong foundation for all future music learning.',
         'basic',
         'AmC_qmSODEk',
+        'https://en.wikipedia.org/wiki/Musical_note',
         'note'
     ),
     (
         'Chord Theory',
-        'Short Piano Tutorial',
+        'This lesson provides a comprehensive introduction to chord structures, including major, minor, diminished, and augmented chords. You will learn how chords are constructed from intervals, how to identify them by ear, and how to play them on your instrument. The lesson also explores chord progressions, voice leading, and practical applications in popular music, with plenty of examples and exercises to reinforce your understanding.',
         'intermediate',
         'VNhyD4O4HWg',
+        'https://en.wikipedia.org/wiki/Chord_(music)',
         'chord'
     );
 

@@ -17,6 +17,7 @@ class LessonModel(Base):
     description = Column(String)
     level = Column(String)
     media_id = Column(String)
+    lesson_link = Column(String)
     type = Column(String)
 
 
@@ -26,6 +27,7 @@ class LessonBase(BaseModel):
     description: Optional[str] = None
     level: Optional[str] = None
     media_id: Optional[str] = None
+    lesson_link: Optional[str] = None
     type: Optional[str] = None
 
 

@@ -72,6 +72,70 @@ VALUES (
         'VNhyD4O4HWg',
         'https://en.wikipedia.org/wiki/Chord_(music)',
         'chord'
+    ),
+    (
+        'Understanding Rhythm',
+        'Explore the fundamental concepts of rhythm in music, including beat, tempo, meter, and syncopation. This lesson will help you understand how different note durations and rests create rhythmic patterns and how to feel and internalize a steady pulse. Practical exercises will focus on clapping rhythms, playing with a metronome, and recognizing various rhythmic figures in popular songs.',
+        'basic',
+        'ZJIbf4nMG3Y',
+        'https://en.wikipedia.org/wiki/Rhythm',
+        'rhythm'
+    ),
+    (
+        'Major and Minor Scales',
+        'Delve into the construction and sound of major and minor scales, the building blocks of melodies and harmonies. You will learn the specific interval patterns for each scale type, how to play them on an instrument, and how to identify their characteristic sounds. The lesson also touches on key signatures and their relation to scales.',
+        'basic',
+        'rxaNn1gXg-E',
+        'https://en.wikipedia.org/wiki/Scale_(music)',
+        'scale'
+    ),
+    (
+        'Introduction to Harmony',
+        'Discover the fascinating world of harmony beyond basic chords. This lesson introduces concepts like consonance and dissonance, voice leading principles, and simple chord progressions. You will learn how different chords interact to create emotional impact and how to analyze basic harmonic structures in music.',
+        'intermediate',
+        'D2ltRa2BosE',
+        'https://en.wikipedia.org/wiki/Harmony',
+        'harmony'
+    ),
+    (
+        'Ear Training Fundamentals',
+        'Develop your musical ear by learning to identify intervals, chords, and simple melodies by sound. This lesson provides practical exercises and techniques to improve your aural perception, a crucial skill for any musician. Topics include recognizing major/minor intervals, distinguishing chord qualities, and dictating simple tunes.',
+        'basic',
+        'Wzqa44N-sIU',
+        'https://en.wikipedia.org/wiki/Ear_training',
+        'ear_training'
+    ),
+    (
+        'Counterpoint Principles',
+        'Explore the art of counterpoint, where two or more independent melodic lines are interwoven to create a harmonious whole. This lesson covers the basic species of counterpoint, focusing on melodic independence and proper voice leading. It is an essential topic for composers and those seeking a deeper understanding of classical music.',
+        'advanced',
+        'TwPn47Ad_sE',
+        'https://en.wikipedia.org/wiki/Counterpoint',
+        'composition'
+    ),
+    (
+        'Music Form and Analysis',
+        'Understand the structural elements that define musical compositions. This lesson introduces common musical forms such as binary, ternary, sonata form, and rondo. You will learn to identify these forms in various pieces of music and analyze how different sections contribute to the overall structure and narrative of a work.',
+        'advanced',
+        'Y_5K8f5CZpg', 
+        'https://en.wikipedia.org/wiki/Musical_form',
+        'analysis'
+    ),
+    (
+        'Orchestration Basics',
+        'An introduction to the principles of orchestration, the art of assigning musical parts to different instruments in an ensemble. This lesson covers the characteristics and common uses of various orchestral instruments (strings, woodwinds, brass, percussion) and how to blend their sounds effectively to create rich and varied timbres.',
+        'advanced',
+        'fjzjGhN56Ok',
+        'https://en.wikipedia.org/wiki/Orchestration',
+        'orchestration'
+    ),
+    (
+        'Reading Sheet Music',
+        'Master the fundamentals of reading standard musical notation. This lesson covers staffs, clefs, time signatures, key signatures, and the placement of notes and rests. Practical exercises will help you confidently interpret and perform music from a score.',
+        'basic',
+        '-3WuQxnA7Hg',
+        'https://en.wikipedia.org/wiki/Musical_notation',
+        'notation'
     );
 
 CREATE TABLE IF NOT EXISTS Exercises (

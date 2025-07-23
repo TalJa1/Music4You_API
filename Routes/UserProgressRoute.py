@@ -46,6 +46,16 @@ async def get_user_progresses(db: AsyncSession = Depends(get_db)):
     return progresses
 
 
+# Get all progress records by user_id
+@router.get("/user-progress/by-user/{user_id}", response_model=List[UserProgress])
+async def get_progress_by_user(user_id: int, db: AsyncSession = Depends(get_db)):
+    result = await db.execute(
+        select(UserProgressModel).where(UserProgressModel.user_id == user_id)
+    )
+    progresses = result.scalars().all()
+    return progresses
+
+
 @router.get("/user-progress/{progress_id}", response_model=UserProgress)
 async def get_user_progress(progress_id: int, db: AsyncSession = Depends(get_db)):
     result = await db.execute(

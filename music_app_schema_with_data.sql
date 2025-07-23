@@ -59,14 +59,14 @@ VALUES (
         'Basic Notes',
         'Learn the basic musical notes',
         'basic',
-        'PyOKefHURsg',
+        'AmC_qmSODEk',
         'note'
     ),
     (
         'Chord Theory',
         'Short Piano Tutorial',
         'intermediate',
-        'dJBq89uZYmI',
+        'VNhyD4O4HWg',
         'chord'
     );
 

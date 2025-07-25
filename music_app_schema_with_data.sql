@@ -154,17 +154,316 @@ INSERT
         type,
         content
     )
-VALUES (
+VALUES
+    -- Exercises for lesson 1
+    (
         1,
-        'Note Recognition Quiz',
+        'What is the name of the note on the second line of the treble staff?',
         'note_recognition',
-        'Identify the notes from audio clips'
+        'G'
+    ),
+    (
+        1,
+        'Which note is located between C and E?',
+        'note_recognition',
+        'D'
+    ),
+    (
+        1,
+        'What is the value of a whole note?',
+        'note_recognition',
+        '4 beats'
+    ),
+    (
+        1,
+        'Which note is represented by the first space in the bass clef?',
+        'note_recognition',
+        'A'
+    ),
+    (
+        1,
+        'What is the musical alphabet?',
+        'note_recognition',
+        'A B C D E F G'
+    ),
+    -- Exercises for lesson 2
+    (
+        2,
+        'What is the time signature for common time?',
+        'rhythm',
+        '4/4'
     ),
     (
         2,
-        'Chord Matching',
-        'chord_identification',
-        'Choose the right chord from the audio'
+        'How many beats does a dotted quarter note get?',
+        'rhythm',
+        '1.5 beats'
+    ),
+    (
+        2,
+        'What is syncopation?',
+        'rhythm',
+        'Emphasis on off-beats'
+    ),
+    (
+        2,
+        'What is the tempo marking for a slow pace?',
+        'rhythm',
+        'Largo'
+    ),
+    (
+        2,
+        'Which note value is the shortest: quarter, eighth, or sixteenth?',
+        'rhythm',
+        'Sixteenth note'
+    ),
+    -- Exercises for lesson 3
+    (
+        3,
+        'What is the interval pattern for a major scale?',
+        'scale',
+        'W W H W W W H'
+    ),
+    (
+        3,
+        'What is the relative minor of C major?',
+        'scale',
+        'A minor'
+    ),
+    (
+        3,
+        'How many sharps are in the G major scale?',
+        'scale',
+        '1'
+    ),
+    (
+        3,
+        'What is the key signature for F major?',
+        'scale',
+        '1 flat (Bb)'
+    ),
+    (
+        3,
+        'Which scale has all white keys on the piano?',
+        'scale',
+        'C major'
+    ),
+    -- Exercises for lesson 4
+    (
+        4,
+        'What is consonance in music?',
+        'harmony',
+        'Pleasant-sounding combination of notes'
+    ),
+    (
+        4,
+        'What is a simple chord progression in C major?',
+        'harmony',
+        'C - F - G - C'
+    ),
+    (
+        4,
+        'What is voice leading?',
+        'harmony',
+        'Smooth movement between chords'
+    ),
+    (
+        4,
+        'What is a dissonant interval?',
+        'harmony',
+        'Minor second or tritone'
+    ),
+    (
+        4,
+        'What is the tonic chord in G major?',
+        'harmony',
+        'G major'
+    ),
+    -- Exercises for lesson 5
+    (
+        5,
+        'What is an interval?',
+        'ear_training',
+        'The distance between two notes'
+    ),
+    (
+        5,
+        'How do you identify a major third by ear?',
+        'ear_training',
+        'It sounds happy and is 4 semitones apart'
+    ),
+    (
+        5,
+        'What is the difference between a major and minor chord?',
+        'ear_training',
+        'The third is lowered in a minor chord'
+    ),
+    (
+        5,
+        'What is melodic dictation?',
+        'ear_training',
+        'Writing down a melody you hear'
+    ),
+    (
+        5,
+        'What is the interval between C and G?',
+        'ear_training',
+        'Perfect fifth'
+    ),
+    -- Exercises for lesson 6
+    (
+        6,
+        'What is counterpoint?',
+        'composition',
+        'The art of combining independent melodies'
+    ),
+    (
+        6,
+        'What is species counterpoint?',
+        'composition',
+        'A method of teaching counterpoint in stages'
+    ),
+    (
+        6,
+        'What is voice independence?',
+        'composition',
+        'Each melodic line stands on its own'
+    ),
+    (
+        6,
+        'What is proper voice leading?',
+        'composition',
+        'Smooth, logical movement between notes'
+    ),
+    (
+        6,
+        'What is a canon?',
+        'composition',
+        'A melody that is imitated after a delay'
+    ),
+    -- Exercises for lesson 7
+    (
+        7,
+        'What is binary form?',
+        'analysis',
+        'A musical form with two sections (AB)'
+    ),
+    (
+        7,
+        'What is sonata form?',
+        'analysis',
+        'Exposition, development, recapitulation'
+    ),
+    (
+        7,
+        'What is a rondo?',
+        'analysis',
+        'A form with a recurring theme (ABACA)'
+    ),
+    (
+        7,
+        'What is the purpose of musical analysis?',
+        'analysis',
+        'To understand structure and meaning'
+    ),
+    (
+        7,
+        'What is ternary form?',
+        'analysis',
+        'A musical form with three sections (ABA)'
+    ),
+    -- Exercises for lesson 8
+    (
+        8,
+        'What is a major chord?',
+        'chord',
+        'A chord with a root, major third, and perfect fifth'
+    ),
+    (
+        8,
+        'What is a diminished chord?',
+        'chord',
+        'A chord with a root, minor third, and diminished fifth'
+    ),
+    (
+        8,
+        'What is a chord progression?',
+        'chord',
+        'A sequence of chords played in succession'
+    ),
+    (
+        8,
+        'What is voice leading in chords?',
+        'chord',
+        'Smooth movement between chord tones'
+    ),
+    (
+        8,
+        'What is an augmented chord?',
+        'chord',
+        'A chord with a root, major third, and augmented fifth'
+    ),
+    -- Exercises for lesson 9
+    (
+        9,
+        'What is orchestration?',
+        'orchestration',
+        'Assigning music to different instruments'
+    ),
+    (
+        9,
+        'Name a woodwind instrument.',
+        'orchestration',
+        'Flute'
+    ),
+    (
+        9,
+        'What is a string section?',
+        'orchestration',
+        'Violins, violas, cellos, basses'
+    ),
+    (
+        9,
+        'What is timbre?',
+        'orchestration',
+        'The color or quality of a musical sound'
+    ),
+    (
+        9,
+        'What is a brass instrument?',
+        'orchestration',
+        'Trumpet'
+    ),
+    -- Exercises for lesson 10
+    (
+        10,
+        'What is a staff?',
+        'notation',
+        'The set of five lines and four spaces for writing music'
+    ),
+    (
+        10,
+        'What is a clef?',
+        'notation',
+        'A symbol that indicates pitch range'
+    ),
+    (
+        10,
+        'What is a time signature?',
+        'notation',
+        'Indicates beats per measure and note value'
+    ),
+    (
+        10,
+        'What is a key signature?',
+        'notation',
+        'Indicates which notes are sharp or flat'
+    ),
+    (
+        10,
+        'What is a rest?',
+        'notation',
+        'A symbol for silence in music'
     );
 
 CREATE TABLE IF NOT EXISTS Songs (

@@ -46,6 +46,15 @@ async def get_practice_rooms(db: AsyncSession = Depends(get_db)):
     return rooms
 
 
+@router.get("/practice-rooms/by-user/{user_id}", response_model=List[PracticeRoom])
+async def get_practice_rooms_by_user(user_id: int, db: AsyncSession = Depends(get_db)):
+    result = await db.execute(
+        select(PracticeRoomModel).where(PracticeRoomModel.host_user_id == user_id)
+    )
+    rooms = result.scalars().all()
+    return rooms
+
+
 @router.get("/practice-rooms/{room_id}", response_model=PracticeRoom)
 async def get_practice_room(room_id: int, db: AsyncSession = Depends(get_db)):
     result = await db.execute(

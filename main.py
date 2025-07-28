@@ -13,6 +13,7 @@ from Routes import (
     SongRoute,
     UserRoute,
     UserProgressRoute,
+    PracticeRoomRoute,
 )
 import logging
 from contextlib import asynccontextmanager
@@ -67,3 +68,4 @@ app.include_router(UserProgressRoute.router, prefix="/api/v1", tags=["user-progr
 app.include_router(LessonRoute.router, prefix="/api/v1", tags=["lessons"])
 app.include_router(ExerciseRoute.router, prefix="/api/v1", tags=["exercises"])
 app.include_router(ResetDBRoute.router, prefix="/api/v1", tags=["reset-db"])
+app.include_router(PracticeRoomRoute.router, prefix="/api/v1", tags=["practice-rooms"])

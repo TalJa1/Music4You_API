@@ -529,10 +529,40 @@ INSERT
     OR IGNORE INTO PracticeRooms (
         room_name,
         host_user_id,
-        instrument
+        instrument,
+        created_at
     )
-VALUES ('Morning Jam', 1, 'Guitar'),
-    ('Night Practice', 2, 'Piano');
+VALUES
+    -- Piano
+    ('Grand Piano Studio', 1, 'Piano', '2025-07-01 12:00:00'),
+    ('Classical Piano Hall', 2, 'Piano', '2025-07-01 13:00:00'),
+    ('Jazz Piano Lounge', 1, 'Piano', '2025-07-01 14:00:00'),
+    ('Beginner Piano Practice', 2, 'Piano', '2025-07-01 15:00:00'),
+    ('Advanced Piano Room', 1, 'Piano', '2025-07-01 16:00:00'),
+    -- Guitar
+    ('Acoustic Guitar Den', 1, 'Guitar', '2025-07-01 17:00:00'),
+    ('Electric Guitar Lab', 2, 'Guitar', '2025-07-01 18:00:00'),
+    ('Fingerstyle Guitar Studio', 1, 'Guitar', '2025-07-01 19:00:00'),
+    ('Beginner Guitar Circle', 2, 'Guitar', '2025-07-01 20:00:00'),
+    ('Lead Guitar Room', 1, 'Guitar', '2025-07-01 21:00:00'),
+    -- Violin
+    ('Violin Virtuoso Suite', 1, 'Violin', '2025-07-01 22:00:00'),
+    ('Chamber Violin Room', 2, 'Violin', '2025-07-01 23:00:00'),
+    ('Solo Violin Practice', 1, 'Violin', '2025-07-02 00:00:00'),
+    ('Beginner Violin Studio', 2, 'Violin', '2025-07-02 01:00:00'),
+    ('Advanced Violin Hall', 1, 'Violin', '2025-07-02 02:00:00'),
+    -- Organ
+    ('Pipe Organ Sanctuary', 1, 'Organ', '2025-07-02 03:00:00'),
+    ('Electric Organ Studio', 2, 'Organ', '2025-07-02 04:00:00'),
+    ('Baroque Organ Room', 1, 'Organ', '2025-07-02 05:00:00'),
+    ('Beginner Organ Practice', 2, 'Organ', '2025-07-02 06:00:00'),
+    ('Modern Organ Lab', 1, 'Organ', '2025-07-02 07:00:00'),
+    -- Flute
+    ('Flute Harmony Room', 1, 'Flute', '2025-07-02 08:00:00'),
+    ('Classical Flute Studio', 2, 'Flute', '2025-07-02 09:00:00'),
+    ('Solo Flute Practice', 1, 'Flute', '2025-07-02 10:00:00'),
+    ('Beginner Flute Circle', 2, 'Flute', '2025-07-02 11:00:00'),
+    ('Advanced Flute Hall', 1, 'Flute', '2025-07-02 12:00:00');
 
 CREATE TABLE IF NOT EXISTS Achievements (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
